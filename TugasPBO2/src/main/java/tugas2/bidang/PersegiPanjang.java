@@ -30,6 +30,7 @@ public class PersegiPanjang implements hitungbidang {
     public double luas() {
         return this.panjang*this.lebar;
     }
+    
 
     @Override
     public double keliling() {
