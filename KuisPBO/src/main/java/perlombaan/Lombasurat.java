@@ -22,23 +22,37 @@ public class Lombasurat implements hitungnilai{
     public double getStruktur() {
         return struktur;
     }
-    
+    public void setStruktur(double struktur){
+        this.struktur=struktur;
+    }
     
     public double getIsi() {
         return isi;
     }
-    
+    public void setIsi(double isi){
+        this.isi=isi;
+    }
     public double getKreatif(){
         return kreatif;
     }
-    
+    public void setKreatif(double kreatif){
+        this.kreatif=kreatif;
+    }
     public double getKaidah(){
         return kaidah;
     }
-
-    public double nilaiakhir() {
-        return (this.isi*0.4)+(this.struktur*0.1)+(this.kreatif*0.3)+(this.kaidah*0.2);
+    public void setKaidah(double kaidah){
+        this.kaidah=kaidah;
     }
-     
 
+    /**
+     *
+     * @return
+     */
+    @Override
+    public double nilaiakhir() {
+        
+        return (this.getStruktur()*10/100) + (this.getIsi()*40/100)+(this.getKreatif()*3/10)+(this.getKaidah()*2/10);
+    }
 }
+
